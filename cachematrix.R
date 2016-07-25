@@ -4,6 +4,7 @@
 
 ## this first function takes a matrix input
 ## and outputs a list of functions to be used in cacheSolve
+## submit in form "cacheSolve(makeCacheMatrix(matrix))"
 
 makeCacheMatrix <- function(x = matrix()) {
   mtrx_inv <<- NULL
@@ -14,8 +15,9 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function() x
   setinv <- function(solve) mtrx_inv <<- solve 
   getinv <- function() mtrx_inv
-  list(set = set, get = get, setinv = setinv, getinv = getinv) ##name functions
+  list(set = set, get = get, setinv = setinv, getinv = getinv) ##named functions
 }
+
 ## This function tests so see if the cach is null
 ## if the cache is not null it returns the cache
 ## if the cache is not null it returns the cached value
